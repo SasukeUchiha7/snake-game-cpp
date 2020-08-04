@@ -4,8 +4,8 @@ using namespace std;
 
 // global variables
 bool gameover;
-const int width = 20; 
-const int height = 15;
+const int width = 20;
+const int height = 20;
 int x, y, fruitX, fruitY, score;
 int tailX[100], tailY[100]; //snake coordinates
 int snakeLen;
@@ -101,13 +101,13 @@ void Display()
 
     cout << endl;
 
-    cout << "Score:" << score << endl;
+    cout << "\tScore:" << score << endl;
 }
 
 void moves()
 {
 
-    if (_kbhit())   // checks if key is not pressed
+    if (_kbhit()) // checks if key is not pressed
     {
 
         switch (_getch()) //takes the input
@@ -225,7 +225,7 @@ void algorithm()
     if (x == fruitX && y == fruitY) // getting fruit
     {
 
-        score += 10; //updating score 
+        score += 10; //updating score
 
         fruitX = rand() % width;
 
@@ -238,7 +238,7 @@ void algorithm()
 
 int main()
 {
-    Setup(); // initializing 
+    Setup(); // initializing
 
     while (!gameover)
     {
